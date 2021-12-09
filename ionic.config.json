@@ -1,0 +1,7 @@
+{
+  "name": "contact-challenge",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
