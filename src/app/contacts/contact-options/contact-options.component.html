@@ -1,0 +1,17 @@
+<ng-container *ngFor="let item of orderedList;">
+  <ion-item *ngIf="item" [detail]="false">
+    <ion-label class="ion-text-wrap">
+      <h2>
+        {{ item.name }}
+      </h2>
+      <h3>Rank: {{ item.rank }}</h3>
+      <p>
+        Intro Free: {{ item.introsOffered.free }}
+      </p>
+      <p>
+        Intro VIP: {{ item.introsOffered.vip }}
+      </p>
+    </ion-label>
+  </ion-item>
+</ng-container>
+

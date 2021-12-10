@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>contacts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h1>Contact to Offer VIP</h1>
+        <p>Name: {{ contactVIP.name}} | email: {{ contactVIP.email }} | Free Intros: {{ contactVIP.introsOffered.free }} | VIP Intros: {{ contactVIP.introsOffered.vip }} </p>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col>
+        <h1>Contact to Offer Free</h1>
+        <ng-container *ngFor="let contact of contactFree;">
+          <p>Name: {{ contact.name}} | email: {{ contact.email }} | Free Intros: {{ contact.introsOffered.free }} | VIP Intros: {{ contact.introsOffered.vip }} </p>
+        </ng-container>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col>
+        <app-contact-options [contacts]="rankedContacts"></app-contact-options>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+</ion-content>
